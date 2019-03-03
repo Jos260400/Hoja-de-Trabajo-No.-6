@@ -11,14 +11,14 @@ public class Main {
 
         Scanner sn = new Scanner(System.in);
 
-        //Indica si salimos o no
+        //Definimos si salimos o no y nuestra variable opcion
         boolean salir = false;
         int opcion;
 
-        //Bucle para pedir las opciones hasta que elijamos salir
+        //Usamos este bucle para pedir las opciones hasta que elijamos salir
         while (!salir) {
 
-            //opciones
+            //Menu
             System.out.println("1. HashMap");
             System.out.println("2. TreeMap");
             System.out.println("3. LinkedHaspMap");
@@ -26,11 +26,11 @@ public class Main {
 
             try{
 
-                //Pide una opción
+                //Indicamos la opción que queremos
                 System.out.println("Introduce un numero: ");
                 opcion = sn.nextInt();
 
-                //Realiza una de las opciones
+                //Mostramos cada una de las opciones
                 switch (opcion) {
                     case 1:
                         System.out.println("HashMap");
@@ -49,7 +49,7 @@ public class Main {
                 }
 
 
-                //controla la excepcionn en caso de que se introduzca un valor no correcto
+                //Usamos esto para que el usuario note que solo se pueden ingresar valores númericos
             }catch(InputMismatchException e){
                 System.out.println("Debes escribir un numero");
                 sn.next();
